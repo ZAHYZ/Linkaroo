@@ -9,16 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+        TabView {
+            NavigationStack {
+                CommunityFeedView()
+            }
+            .tabItem {
+                Label("Feed", systemImage: "list.bullet")
+            }
 
-#Preview {
-    ContentView()
+            NavigationStack {
+                AskQuestionView()
+            }
+            .tabItem {
+                Label("Ask", systemImage: "plus.circle")
+            }
+
+            NavigationStack {
+                VolunteerProfileView()
+            }
+            .tabItem {
+                Label("Volunteer", systemImage: "checkmark.seal")
+            }
+
+            NavigationStack {
+                ConnectHelpView()
+            }
+            .tabItem {
+                Label("Help", systemImage: "person.2")
+            }
+        }
+    }
 }

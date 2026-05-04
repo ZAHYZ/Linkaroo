@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		4065EDDF2FA86FDA00E90345 /* Linkaroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linkaroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4065EDDF2FA86FDA00E90345 /* Linkaroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Linkaroo.app; path = "/Users/14509867/Downloads/Linkaroo/build/Debug-iphoneos/Linkaroo.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				4065EDE12FA86FDA00E90345 /* Linkaroo */,
-				4065EDE02FA86FDA00E90345 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		4065EDE02FA86FDA00E90345 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4065EDDF2FA86FDA00E90345 /* Linkaroo.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +86,7 @@
 			mainGroup = 4065EDD62FA86FDA00E90345;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 4065EDE02FA86FDA00E90345 /* Products */;
+			productRefGroup = 4065EDD62FA86FDA00E90345;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
