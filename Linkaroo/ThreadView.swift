@@ -1,18 +1,10 @@
-//
-//  ThreadView.swift
-//  Linkaroo
-//
-//  Created by Zahyaan Azmi on 4/5/2026.
-//
-
-
 import SwiftUI
 
 struct ThreadView: View {
     let answers: [Answer] = [
         Answer(
             author: "Sarah A.",
-            role: "Settlement worker · 4 yrs",
+            role: "Settlement worker · 4 yrs experience · 98% helpful",
             text: "You can register at any Medicare service centre — bring your visa grant letter and passport. Processing takes about 10 working days, and your card will arrive by mail.",
             source: "servicesaustralia.gov.au",
             helpfulCount: 31,
@@ -39,35 +31,17 @@ struct ThreadView: View {
                     Text("How do I register for Medicare as a new permanent resident?")
                         .font(.title3)
                         .fontWeight(.bold)
+                        .lineSpacing(4)
 
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Asked by")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("linh_hn")
-                                .fontWeight(.semibold)
-                        }
-
-                        Spacer()
-
-                        VStack(alignment: .leading) {
-                            Text("Posted")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("3 days ago")
-                                .fontWeight(.semibold)
-                        }
-
-                        Spacer()
-
-                        BadgeView(text: "Mod watched", color: .green)
-                    }
+                    Text("Asked by linh_hn · 3 days ago")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
 
                     Text("3 ANSWERS")
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
+                        .padding(.top, 4)
 
                     ForEach(answers) { answer in
                         if answer.isVerified {
@@ -108,7 +82,7 @@ struct ThreadView: View {
             NavigationLink {
                 ConnectHelpView()
             } label: {
-                Text("Connect →")
+                Text("Connect")
                     .font(.caption)
                     .fontWeight(.bold)
                     .padding(.horizontal, 14)

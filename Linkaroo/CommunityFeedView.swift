@@ -45,9 +45,7 @@ struct CommunityFeedView: View {
                 header
 
                 ScrollView {
-                    VStack(spacing: 18) {
-                        trustBanner
-
+                    VStack(spacing: 16) {
                         ForEach(posts) { post in
                             NavigationLink {
                                 ThreadView()
@@ -66,54 +64,14 @@ struct CommunityFeedView: View {
 
     private var header: some View {
         HStack {
-            Text("arrivaau")
+            Text("Linkaroo")
                 .font(.title2)
                 .fontWeight(.bold)
-                .foregroundColor(.white)
+                .foregroundColor(.primary)
 
             Spacer()
-
-            HStack(spacing: 6) {
-                Circle()
-                    .fill(Color.green)
-                    .frame(width: 9, height: 9)
-
-                Text("2 mods online")
-                    .font(.subheadline)
-                    .foregroundColor(.white.opacity(0.85))
-            }
         }
         .padding()
-        .background(Color.black)
-    }
-
-    private var trustBanner: some View {
-        HStack(alignment: .top, spacing: 12) {
-            Circle()
-                .fill(Color.green)
-                .frame(width: 10, height: 10)
-                .padding(.top, 5)
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Mods actively reviewing answers today")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-
-                Text("Trust signals help you know which answers are verified, sourced, or still awaiting review.")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-
-            Spacer()
-
-            Text("Learn more")
-                .font(.caption)
-                .fontWeight(.semibold)
-                .foregroundColor(.green)
-        }
-        .padding()
-        .background(Color.black)
-        .foregroundColor(.white)
-        .cornerRadius(18)
+        .background(Color.appBackground)
     }
 }
